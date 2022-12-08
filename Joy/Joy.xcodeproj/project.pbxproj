@@ -23,6 +23,13 @@
 		759EF007294255F1002C82EE /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EF006294255F1002C82EE /* FoodViewController.swift */; };
 		759EF00929425615002C82EE /* BreatheViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EF00829425615002C82EE /* BreatheViewController.swift */; };
 		759EF00B29425633002C82EE /* SleepViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EF00A29425633002C82EE /* SleepViewController.swift */; };
+		75B4E079294272E50095B973 /* TetrisGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E078294272E50095B973 /* TetrisGame.swift */; };
+		75B4E07B29427AC30095B973 /* TetrisGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E07A29427AC30095B973 /* TetrisGameViewModel.swift */; };
+		75B4E07D29427AF40095B973 /* StageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E07C29427AF40095B973 /* StageView.swift */; };
+		75B4E07F29427AFD0095B973 /* BlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E07E29427AFD0095B973 /* BlockView.swift */; };
+		75B4E08129427B850095B973 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E08029427B850095B973 /* Cell.swift */; };
+		75B4E08329427B960095B973 /* Tetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E08229427B960095B973 /* Tetromino.swift */; };
+		75B4E08529427BA40095B973 /* TetrominoOnStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E08429427BA40095B973 /* TetrominoOnStage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +51,13 @@
 		759EF006294255F1002C82EE /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
 		759EF00829425615002C82EE /* BreatheViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreatheViewController.swift; sourceTree = "<group>"; };
 		759EF00A29425633002C82EE /* SleepViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepViewController.swift; sourceTree = "<group>"; };
+		75B4E078294272E50095B973 /* TetrisGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisGame.swift; sourceTree = "<group>"; };
+		75B4E07A29427AC30095B973 /* TetrisGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisGameViewModel.swift; sourceTree = "<group>"; };
+		75B4E07C29427AF40095B973 /* StageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageView.swift; sourceTree = "<group>"; };
+		75B4E07E29427AFD0095B973 /* BlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockView.swift; sourceTree = "<group>"; };
+		75B4E08029427B850095B973 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		75B4E08229427B960095B973 /* Tetromino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tetromino.swift; sourceTree = "<group>"; };
+		75B4E08429427BA40095B973 /* TetrominoOnStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrominoOnStage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +186,7 @@
 		759EEFFE29425577002C82EE /* Games */ = {
 			isa = PBXGroup;
 			children = (
+				75B4E077294272D00095B973 /* Tetris */,
 				759EF004294255C9002C82EE /* GamesViewController.swift */,
 			);
 			path = Games;
@@ -207,6 +222,20 @@
 				759EEFFB29425529002C82EE /* FactoryTabBarController.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		75B4E077294272D00095B973 /* Tetris */ = {
+			isa = PBXGroup;
+			children = (
+				75B4E078294272E50095B973 /* TetrisGame.swift */,
+				75B4E07A29427AC30095B973 /* TetrisGameViewModel.swift */,
+				75B4E07C29427AF40095B973 /* StageView.swift */,
+				75B4E07E29427AFD0095B973 /* BlockView.swift */,
+				75B4E08029427B850095B973 /* Cell.swift */,
+				75B4E08229427B960095B973 /* Tetromino.swift */,
+				75B4E08429427BA40095B973 /* TetrominoOnStage.swift */,
+			);
+			path = Tetris;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,17 +311,24 @@
 				759EEFD629423D62002C82EE /* ViewController.swift in Sources */,
 				759EEFF82942413C002C82EE /* CustomDoubleInfoData.swift in Sources */,
 				759EF00B29425633002C82EE /* SleepViewController.swift in Sources */,
+				75B4E07D29427AF40095B973 /* StageView.swift in Sources */,
 				759EEFF62942411C002C82EE /* CustomCellsProtocols.swift in Sources */,
 				759EEFF4294240FB002C82EE /* CustomDoubleInfo.swift in Sources */,
+				75B4E08529427BA40095B973 /* TetrominoOnStage.swift in Sources */,
+				75B4E07B29427AC30095B973 /* TetrisGameViewModel.swift in Sources */,
 				759EEFD229423D62002C82EE /* AppDelegate.swift in Sources */,
 				759EEFFA294254CA002C82EE /* HomeTabBarController.swift in Sources */,
 				759EEFFC29425529002C82EE /* FactoryTabBarController.swift in Sources */,
 				759EF005294255C9002C82EE /* GamesViewController.swift in Sources */,
 				759EF00929425615002C82EE /* BreatheViewController.swift in Sources */,
+				75B4E079294272E50095B973 /* TetrisGame.swift in Sources */,
 				759EEFD429423D62002C82EE /* SceneDelegate.swift in Sources */,
 				759EEFF229424071002C82EE /* AutoLayout.swift in Sources */,
 				759EF007294255F1002C82EE /* FoodViewController.swift in Sources */,
+				75B4E07F29427AFD0095B973 /* BlockView.swift in Sources */,
 				759EEFE829423E02002C82EE /* HomeViewController.swift in Sources */,
+				75B4E08129427B850095B973 /* Cell.swift in Sources */,
+				75B4E08329427B960095B973 /* Tetromino.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +471,6 @@
 				INFOPLIST_FILE = Joy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -462,7 +497,6 @@
 				INFOPLIST_FILE = Joy/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

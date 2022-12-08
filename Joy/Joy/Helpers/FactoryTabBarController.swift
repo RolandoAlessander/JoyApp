@@ -6,21 +6,23 @@
 //
 
 import UIKit
+import SwiftUI
 
 final class FactoryTabBarController {
   static func createTabBarController() -> HomeTabBarController {
     let homeController: HomeTabBarController = HomeTabBarController()
-    let breathController: BreatheViewController = BreatheViewController()
-    let sleep: SleepViewController = SleepViewController()
-    let gamesController: GamesViewController = GamesViewController()
-    let foodController: FoodViewController = FoodViewController()
+    let breathController: UIViewController = createTabBarControllers(view: BreatheViewController(), title: "Breathe", image: "house")
+    let sleep: UIViewController = createTabBarControllers(view: SleepViewController(), title: "Sleep", image: "house")
+    let gamesController: UIViewController = createTabBarControllers(view: GamesViewController(rootView: TetrisGame()), title: "Games", image: "house")
+    let foodController: UIViewController = createTabBarControllers(view: FoodViewController(), title: "Food", image: "house")
     homeController.setViewControllers([breathController, sleep, gamesController, foodController], animated: true)
     return homeController
   }
 
-//  static func createTabBarControllers(view: UIViewController, title: String, image: UIImage) -> UIViewController {
-//    view.title = title
-//    return 
-//  }
+  static func createTabBarControllers(view: UIViewController, title: String, image: String) -> UIViewController {
+    view.title = title
+    view.tabBarController?.tabBarItem.image = UIImage(systemName: image)
+    view.tabBarController?.tabBarItem.title = title
+    return view
+  }
 }
-//

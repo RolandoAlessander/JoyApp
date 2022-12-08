@@ -6,11 +6,23 @@
 //
 
 import UIKit
+import SwiftUI
 
-class GamesViewController: UIViewController {
+class GamesViewController: UIHostingController<TetrisGame> {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    self.view.backgroundColor = .orange
+  public override init(rootView: TetrisGame) {
+    super.init(rootView: rootView)
+  }
+
+  //Use from Storyboard init
+  @objc required dynamic init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder, rootView: TetrisGame())
+  }
+
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+
+//    rootView.doSomething()
+//    print(rootView.text)
   }
 }
