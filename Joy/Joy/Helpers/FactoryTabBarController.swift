@@ -18,9 +18,9 @@ final class FactoryTabBarController {
     return homeController
   }
 
-  static func createTabBarControllers(view: UIViewController, title: String, image: UIImage) -> UIViewController {
-    view.title = title
-    return
-  }
+//  static func createTabBarControllers(view: UIViewController, title: String, image: UIImage) -> UIViewController {
+//    view.title = title
+//    return 
+//  }
 }
 //
