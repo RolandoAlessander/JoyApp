@@ -14,9 +14,9 @@
 		759EEFDE29423D64002C82EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 759EEFDC29423D64002C82EE /* LaunchScreen.storyboard */; };
 		759EEFE829423E02002C82EE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EEFE729423E02002C82EE /* HomeViewController.swift */; };
 		759EEFF229424071002C82EE /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EEFF129424071002C82EE /* AutoLayout.swift */; };
-		759EEFF4294240FB002C82EE /* CustomDoubleInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EEFF3294240FB002C82EE /* CustomDoubleInfo.swift */; };
+		759EEFF4294240FB002C82EE /* CustomPresentationCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EEFF3294240FB002C82EE /* CustomPresentationCardCell.swift */; };
 		759EEFF62942411C002C82EE /* CustomCellsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EEFF52942411C002C82EE /* CustomCellsProtocols.swift */; };
-		759EEFF82942413C002C82EE /* CustomDoubleInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EEFF72942413C002C82EE /* CustomDoubleInfoData.swift */; };
+		759EEFF82942413C002C82EE /* CustomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EEFF72942413C002C82EE /* CustomData.swift */; };
 		759EEFFA294254CA002C82EE /* HomeTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EEFF9294254CA002C82EE /* HomeTabBarController.swift */; };
 		759EEFFC29425529002C82EE /* FactoryTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EEFFB29425529002C82EE /* FactoryTabBarController.swift */; };
 		759EF005294255C9002C82EE /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759EF004294255C9002C82EE /* GamesViewController.swift */; };
@@ -30,6 +30,12 @@
 		75B4E08129427B850095B973 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E08029427B850095B973 /* Cell.swift */; };
 		75B4E08329427B960095B973 /* Tetromino.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E08229427B960095B973 /* Tetromino.swift */; };
 		75B4E08529427BA40095B973 /* TetrominoOnStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E08429427BA40095B973 /* TetrominoOnStage.swift */; };
+		75B4E0872942BFF90095B973 /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E0862942BFF90095B973 /* RecipesViewController.swift */; };
+		75B4E0892942C3020095B973 /* CustomTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E0882942C3020095B973 /* CustomTitleCell.swift */; };
+		75B4E08B2942C68E0095B973 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E08A2942C68E0095B973 /* CustomTableViewCell.swift */; };
+		75B4E08F2942C8010095B973 /* CustomIngredientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E08E2942C8010095B973 /* CustomIngredientCell.swift */; };
+		75B4E0912942CC980095B973 /* CustomFooterImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E0902942CC980095B973 /* CustomFooterImageCell.swift */; };
+		75B4E0932942CEAC0095B973 /* CustomReceiptPreparationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B4E0922942CEAC0095B973 /* CustomReceiptPreparationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,9 +48,9 @@
 		759EEFDF29423D64002C82EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		759EEFE729423E02002C82EE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		759EEFF129424071002C82EE /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
-		759EEFF3294240FB002C82EE /* CustomDoubleInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDoubleInfo.swift; sourceTree = "<group>"; };
+		759EEFF3294240FB002C82EE /* CustomPresentationCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPresentationCardCell.swift; sourceTree = "<group>"; };
 		759EEFF52942411C002C82EE /* CustomCellsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellsProtocols.swift; sourceTree = "<group>"; };
-		759EEFF72942413C002C82EE /* CustomDoubleInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDoubleInfoData.swift; sourceTree = "<group>"; };
+		759EEFF72942413C002C82EE /* CustomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomData.swift; sourceTree = "<group>"; };
 		759EEFF9294254CA002C82EE /* HomeTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarController.swift; sourceTree = "<group>"; };
 		759EEFFB29425529002C82EE /* FactoryTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryTabBarController.swift; sourceTree = "<group>"; };
 		759EF004294255C9002C82EE /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +64,12 @@
 		75B4E08029427B850095B973 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		75B4E08229427B960095B973 /* Tetromino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tetromino.swift; sourceTree = "<group>"; };
 		75B4E08429427BA40095B973 /* TetrominoOnStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrominoOnStage.swift; sourceTree = "<group>"; };
+		75B4E0862942BFF90095B973 /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		75B4E0882942C3020095B973 /* CustomTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleCell.swift; sourceTree = "<group>"; };
+		75B4E08A2942C68E0095B973 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		75B4E08E2942C8010095B973 /* CustomIngredientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomIngredientCell.swift; sourceTree = "<group>"; };
+		75B4E0902942CC980095B973 /* CustomFooterImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFooterImageCell.swift; sourceTree = "<group>"; };
+		75B4E0922942CEAC0095B973 /* CustomReceiptPreparationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomReceiptPreparationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,7 +166,12 @@
 		759EEFED29424009002C82EE /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
-				759EEFF3294240FB002C82EE /* CustomDoubleInfo.swift */,
+				759EEFF3294240FB002C82EE /* CustomPresentationCardCell.swift */,
+				75B4E0882942C3020095B973 /* CustomTitleCell.swift */,
+				75B4E08A2942C68E0095B973 /* CustomTableViewCell.swift */,
+				75B4E08E2942C8010095B973 /* CustomIngredientCell.swift */,
+				75B4E0902942CC980095B973 /* CustomFooterImageCell.swift */,
+				75B4E0922942CEAC0095B973 /* CustomReceiptPreparationCell.swift */,
 			);
 			path = CustomCells;
 			sourceTree = "<group>";
@@ -162,7 +179,7 @@
 		759EEFEE29424011002C82EE /* CustomDataCells */ = {
 			isa = PBXGroup;
 			children = (
-				759EEFF72942413C002C82EE /* CustomDoubleInfoData.swift */,
+				759EEFF72942413C002C82EE /* CustomData.swift */,
 			);
 			path = CustomDataCells;
 			sourceTree = "<group>";
@@ -196,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				759EF006294255F1002C82EE /* FoodViewController.swift */,
+				75B4E0862942BFF90095B973 /* RecipesViewController.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -309,21 +327,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				759EEFD629423D62002C82EE /* ViewController.swift in Sources */,
-				759EEFF82942413C002C82EE /* CustomDoubleInfoData.swift in Sources */,
+				759EEFF82942413C002C82EE /* CustomData.swift in Sources */,
 				759EF00B29425633002C82EE /* SleepViewController.swift in Sources */,
 				75B4E07D29427AF40095B973 /* StageView.swift in Sources */,
 				759EEFF62942411C002C82EE /* CustomCellsProtocols.swift in Sources */,
-				759EEFF4294240FB002C82EE /* CustomDoubleInfo.swift in Sources */,
+				75B4E08F2942C8010095B973 /* CustomIngredientCell.swift in Sources */,
+				759EEFF4294240FB002C82EE /* CustomPresentationCardCell.swift in Sources */,
 				75B4E08529427BA40095B973 /* TetrominoOnStage.swift in Sources */,
 				75B4E07B29427AC30095B973 /* TetrisGameViewModel.swift in Sources */,
+				75B4E0892942C3020095B973 /* CustomTitleCell.swift in Sources */,
 				759EEFD229423D62002C82EE /* AppDelegate.swift in Sources */,
 				759EEFFA294254CA002C82EE /* HomeTabBarController.swift in Sources */,
 				759EEFFC29425529002C82EE /* FactoryTabBarController.swift in Sources */,
+				75B4E0932942CEAC0095B973 /* CustomReceiptPreparationCell.swift in Sources */,
 				759EF005294255C9002C82EE /* GamesViewController.swift in Sources */,
 				759EF00929425615002C82EE /* BreatheViewController.swift in Sources */,
+				75B4E0912942CC980095B973 /* CustomFooterImageCell.swift in Sources */,
 				75B4E079294272E50095B973 /* TetrisGame.swift in Sources */,
+				75B4E0872942BFF90095B973 /* RecipesViewController.swift in Sources */,
 				759EEFD429423D62002C82EE /* SceneDelegate.swift in Sources */,
 				759EEFF229424071002C82EE /* AutoLayout.swift in Sources */,
+				75B4E08B2942C68E0095B973 /* CustomTableViewCell.swift in Sources */,
 				759EF007294255F1002C82EE /* FoodViewController.swift in Sources */,
 				75B4E07F29427AFD0095B973 /* BlockView.swift in Sources */,
 				759EEFE829423E02002C82EE /* HomeViewController.swift in Sources */,

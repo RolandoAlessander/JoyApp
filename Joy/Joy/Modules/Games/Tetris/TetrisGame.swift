@@ -18,13 +18,6 @@ struct TetrisGame: View {
       VStack {
         VStack {
           Text("Score: 0")
-//          HStack(alignment: .top, spacing: nil) {
-//            Text("Level: \(viewModel.level)")
-//            Spacer()
-//            Text("Lines: 0")
-//            Spacer()
-//            Text("Score: 0")
-//          }
           .frame(maxWidth: .infinity, alignment: .center)
           .padding(.horizontal, 15)
         }.padding(.vertical, 12)
