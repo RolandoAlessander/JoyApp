@@ -12,9 +12,9 @@ struct CustomPresentationCardData: CustomCell {
   let title: String
   let subtitle: String
   let description: String
-  let image: UIImage
+  let image: UIImage?
 
-  init(title: String, subtitle: String, description: String, image: UIImage) {
+  init(title: String, subtitle: String, description: String, image: UIImage?) {
     self.identifier = String(describing: CustomPresentationCardCell.self)
     self.title = title
     self.subtitle = subtitle
@@ -50,5 +50,19 @@ struct CustomPreparationData: CustomCell {
   init(preparation: String) {
     self.identifier = String(describing: CustomReceiptPreparationCell.self)
     self.preparation = preparation
+  }
+}
+
+struct CustomOptionDescriptionData: CustomCell {
+  let identifier: String
+  let title: String
+  let description: String
+  let image: UIImage?
+
+  init(title: String, description: String, image: UIImage?) {
+    self.identifier = String(describing: CustomOptionDescriptionCell.self)
+    self.title = title
+    self.description = description
+    self.image = image
   }
 }

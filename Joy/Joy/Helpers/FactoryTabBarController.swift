@@ -13,7 +13,7 @@ final class FactoryTabBarController {
     let homeController: HomeTabBarController = HomeTabBarController()
     let breathController: UIViewController = createTabBarControllers(view: BreatheViewController(), title: "Breathe", image: "house")
     let sleep: UIViewController = createTabBarControllers(view: SleepViewController(), title: "Sleep", image: "house")
-    let gamesController: UIViewController = createTabBarControllers(view: GamesViewController(rootView: TetrisGame()), title: "Games", image: "house")
+    let gamesController: UIViewController = createTabBarControllers(view: GamesViewController(), title: "Games", image: "house")
     let foodController: UIViewController = createTabBarControllers(view: FoodViewController(), title: "Food", image: "house")
     homeController.setViewControllers([breathController, sleep, gamesController, foodController], animated: true)
     return homeController

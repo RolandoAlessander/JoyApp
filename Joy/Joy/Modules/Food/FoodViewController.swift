@@ -13,9 +13,7 @@ class FoodViewController: UIViewController {
 
   // MARK: - UIObjects
   lazy var tableView: UITableView = {
-    let table: UITableView = UITableView.build { _ in
-      //
-    }
+    let table: UITableView = UITableView.build { _ in }
     return table
   }()
 

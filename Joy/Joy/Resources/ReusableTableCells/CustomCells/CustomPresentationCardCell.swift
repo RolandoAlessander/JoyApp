@@ -9,15 +9,32 @@ import UIKit
 
 final class CustomPresentationCardCell: UITableViewCell {
 
+  lazy private var viewPresentation: UIView = {
+    return UIView.build {
+      $0.backgroundColor = UIColor.white
+      $0.layer.cornerRadius = 10
+      $0.layer.shadowColor = UIColor.gray.cgColor
+      $0.layer.shadowOpacity = 0.7
+      $0.layer.shadowOffset = CGSize(width: 3, height: 3)
+      $0.layer.shadowRadius = 3
+      $0.layer.borderWidth = 0.1
+      $0.layer.borderColor = UIColor.gray.cgColor
+    }
+  }()
+
   lazy private var imagePresentation: UIImageView = {
     return UIImageView.build {
-      $0.image = UIImage(systemName: "house")
+      $0.layer.cornerRadius = 10
+      $0.clipsToBounds = true
     }
   }()
 
   lazy private var titlePresentation: UILabel = {
     return UILabel.build {
       $0.text = "Bowl"
+      $0.font = UIFont.boldSystemFont(ofSize: 30)
+      $0.textColor = .blue
+      $0.layer.shadowRadius = 0
     }
   }()
 
@@ -28,12 +45,14 @@ final class CustomPresentationCardCell: UITableViewCell {
   lazy private var subtitlePresentation: UILabel = {
     return UILabel.build {
       $0.text = "Blend and enjoy avocado"
+      $0.layer.shadowRadius = 0
     }
   }()
 
   lazy private var descriptionPresentation: UILabel = {
     return UILabel.build {
       $0.text = "Servers: 1 Prep: 15 Cooking 10"
+      $0.layer.shadowRadius = 0
     }
   }()
 
@@ -52,24 +71,30 @@ final class CustomPresentationCardCell: UITableViewCell {
   }
 
   private func setUpViews() {
-    contentView.addSubview(imagePresentation)
-    contentView.addSubview(titlePresentation)
-    contentView.addSubview(subtitlePresentation)
-    contentView.addSubview(descriptionPresentation)
+    contentView.addSubview(viewPresentation)
+    viewPresentation.addSubview(imagePresentation)
+    viewPresentation.addSubview(titlePresentation)
+    viewPresentation.addSubview(subtitlePresentation)
+    viewPresentation.addSubview(descriptionPresentation)
   }
 
   private func setUpConstraints() {
     NSLayoutConstraint.activate([
-      imagePresentation.topAnchor.constraint(equalTo: contentView.topAnchor),
-      imagePresentation.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-      imagePresentation.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-      titlePresentation.topAnchor.constraint(equalTo: imagePresentation.bottomAnchor, constant: 40),
-      titlePresentation.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-      subtitlePresentation.topAnchor.constraint(equalTo: titlePresentation.bottomAnchor, constant: 40),
-      subtitlePresentation.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-      descriptionPresentation.topAnchor.constraint(equalTo: subtitlePresentation.bottomAnchor, constant: 40),
-      descriptionPresentation.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-      descriptionPresentation.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+      viewPresentation.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+      viewPresentation.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+      viewPresentation.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+      viewPresentation.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20),
+      imagePresentation.heightAnchor.constraint(lessThanOrEqualToConstant: 200),
+      imagePresentation.topAnchor.constraint(equalTo: viewPresentation.topAnchor),
+      imagePresentation.leadingAnchor.constraint(equalTo: viewPresentation.leadingAnchor),
+      imagePresentation.trailingAnchor.constraint(equalTo: viewPresentation.trailingAnchor),
+      titlePresentation.topAnchor.constraint(equalTo: imagePresentation.bottomAnchor, constant: 20),
+      titlePresentation.leadingAnchor.constraint(equalTo: viewPresentation.leadingAnchor, constant: 20),
+      subtitlePresentation.topAnchor.constraint(equalTo: titlePresentation.bottomAnchor, constant: 20),
+      subtitlePresentation.leadingAnchor.constraint(equalTo: viewPresentation.leadingAnchor, constant: 20),
+      descriptionPresentation.topAnchor.constraint(equalTo: subtitlePresentation.bottomAnchor, constant: 20),
+      descriptionPresentation.leadingAnchor.constraint(equalTo: viewPresentation.leadingAnchor, constant: 20),
+      descriptionPresentation.bottomAnchor.constraint(equalTo: viewPresentation.bottomAnchor)
     ])
   }
 }
