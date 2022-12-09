@@ -5,16 +5,20 @@
 //  Created by Rolando Alessander on 08/12/22.
 //
 
-import Foundation
+import UIKit
 
-struct CustomDoubleInfoData: CustomCell {
+struct CustomPresentationCardData: CustomCell {
   let identifier: String
-  let rightInfoData: String
-  let leftInfoData: String
+  let title: String
+  let subtitle: String
+  let description: String
+  let image: UIImage
 
-  init(rightInfoData: String, leftInfoData: String) {
-    self.identifier = String(describing: CustomDoubleInfoCell.self)
-    self.rightInfoData = rightInfoData
-    self.leftInfoData = leftInfoData
+  init(title: String, subtitle: String, description: String, image: UIImage) {
+    self.identifier = String(describing: CustomPresentationCardCell.self)
+    self.title = title
+    self.subtitle = subtitle
+    self.description = description
+    self.image = image
   }
 }

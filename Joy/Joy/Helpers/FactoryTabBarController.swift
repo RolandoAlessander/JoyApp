@@ -20,9 +20,10 @@ final class FactoryTabBarController {
   }
 
   static func createTabBarControllers(view: UIViewController, title: String, image: String) -> UIViewController {
-    view.title = title
-    view.tabBarController?.tabBarItem.image = UIImage(systemName: image)
-    view.tabBarController?.tabBarItem.title = title
-    return view
+    let navigation: UINavigationController = UINavigationController(rootViewController: view)
+    navigation.title = title
+    navigation.tabBarItem.title = title
+    navigation.tabBarItem.image = UIImage(systemName: image)
+    return navigation
   }
 }
