@@ -11,7 +11,7 @@ class TetrisGameViewModel: ObservableObject {
 
   @Published var stage: [Cell] = Array(repeating: Cell(), count: 286)
   @Published var currentTetromino: TetrominoOnStage = TetrominoOnStage(tetromino: .iBlock)
-  @Published var level: Int = 0
+  @Published var score: Int = 0
 //  @State var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 //  @State var rangeTimer: Double = 1.0
 //  let timer2 = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
@@ -61,6 +61,7 @@ class TetrisGameViewModel: ObservableObject {
           }
         }
         if allTetrominosSet {
+          self.score += 13
           for i in stride(from: indexY, through: 1, by: -1) {
             for j in 0...12 {
               stage[i*13+j] = stage[(i-1)*13+j]

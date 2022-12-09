@@ -84,5 +84,14 @@ extension GamesViewController: UITableViewDataSource, UITableViewDelegate {
     (cell as? CustomCellSetUp)?.setUp(with: currentObject)
     return cell
   }
+
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard let row = dataSource?[indexPath.row] as? CustomPresentationCardData else { return }
+    if row.title == "Tetris" {
+      let game: UIViewController = TetrisHostingController(rootView: TetrisGame())
+      game.modalPresentationStyle = .fullScreen
+      self.present(game, animated: true)
+    }
+  }
 }
 

@@ -9,6 +9,8 @@ import SwiftUI
 
 struct TetrisGame: View {
 
+  @Environment(\.dismiss) var dismiss
+
   @ObservedObject private var viewModel: TetrisGameViewModel = TetrisGameViewModel()
   
   var body: some View {
@@ -17,76 +19,88 @@ struct TetrisGame: View {
         .edgesIgnoringSafeArea(.all)
       VStack {
         VStack {
-          Text("Score: 0")
-          .frame(maxWidth: .infinity, alignment: .center)
-          .padding(.horizontal, 15)
+          HStack {
+            Button("X") {
+              dismiss()
+            }.padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 0))
+
+            Text("Score: \(viewModel.score)")
+            .frame(maxWidth: .infinity, alignment: .center)
+            .padding(.horizontal, 15)
+
+            Button("Start") {
+              //
+            }.padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20))
+          }
         }.padding(.vertical, 12)
-          .background(.gray)
+          .background(.black)
           .foregroundColor(.white)
           .font(.title2)
           .cornerRadius(5)
 
         StageView(stage: viewModel.stage)
-          .aspectRatio(1, contentMode: .fit)
           .cornerRadius(5)
 
         VStack {
-//          Button("Start", action: viewModel.startEvent)
-//            .frame(maxWidth: .infinity, maxHeight: 30)
-//            .overlay(
-//              RoundedRectangle(cornerRadius: 10)
-//                .stroke(.white, lineWidth: 2)
-//            )
+
           HStack {
             Spacer()
-            Button("R L", action: viewModel.rotateTetrominoLeft)
-              .frame(width: 50, height: 50, alignment: .center)
-              .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                  .stroke(.white, lineWidth: 2)
-              )
+
+            Button {
+              viewModel.rotateTetrominoLeft()
+            } label: {
+              Image(systemName: "arrow.counterclockwise")
+                .font(.system(size: 30))
+            }
+            .frame(width: 30, height: 30, alignment: .center)
 
             Spacer()
 
-            Button("L", action: viewModel.leftEvent)
-              .frame(width: 50, height: 50, alignment: .center)
-              .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                  .stroke(.white, lineWidth: 2)
-              )
-            Button("R", action: viewModel.rightEvent)
-              .frame(width: 50, height: 50, alignment: .center)
-              .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                  .stroke(.white, lineWidth: 2)
-              )
+            Button {
+              viewModel.leftEvent()
+            } label: {
+              Image(systemName: "arrowtriangle.backward")
+                .font(.system(size: 30))
+            }
+            .frame(width: 30, height: 30, alignment: .center)
+
+            Button {
+              viewModel.rightEvent()
+            } label: {
+              Image(systemName: "arrowtriangle.forward")
+                .font(.system(size: 30))
+            }
+            .frame(width: 30, height: 30, alignment: .center)
+            .padding(.leading, 20)
 
             Spacer()
 
-            Button("R R", action: viewModel.rotateTetrominoRight)
-              .frame(width: 50, height: 50, alignment: .center)
-              .overlay(
-                RoundedRectangle(cornerRadius: 10)
-                  .stroke(.white, lineWidth: 2)
-              )
+            Button {
+              viewModel.rotateTetrominoRight()
+            } label: {
+              Image(systemName: "arrow.clockwise")
+                .font(.system(size: 30))
+            }
+            .frame(width: 30, height: 0, alignment: .center)
 
             Spacer()
           }
-          Button("Down", action: viewModel.downEvent)
-            .frame(width: 50, height: 50, alignment: .center)
-            .overlay(
-              RoundedRectangle(cornerRadius: 10)
-                .stroke(.white, lineWidth: 2)
-            )
-            .frame(width: 50, height: 50, alignment: .leading)
+          Button {
+            viewModel.downEvent()
+          } label: {
+            Image(systemName: "arrowtriangle.down")
+              .font(.system(size: 30))
+          }
+          .frame(width: 30, height: 30, alignment: .center)
 
         }
         .font(.caption)
         .padding(.vertical, 0)
-        .background(.gray)
+        .background(.black)
         .foregroundColor(.white)
         .font(.title2)
         .cornerRadius(5)
+
         Spacer()
       }
       .padding(.top, 20)
